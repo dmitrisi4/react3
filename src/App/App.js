@@ -2,26 +2,22 @@ import React, {Component} from 'react';
 import Header from '../Header/Header';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
-import Profile from "../Profile/Profile";
-import './app.css';
-import styled from 'styled-components';
+import Profile from '../Profile/Profile';
+import Styles from './App.mudule.css';
 
 
-const Wrapper = styled.section`
-  padding: 4em;
-  background: papayawhip;
-`;
+
+console.log(Styles);
+
 
 const App = () => {
 	return (
-		<Wrapper>
-			<div className={'app-wrapper'}>
-				<Header/>
-				<Profile />
-				<Navbar/>
-				<Footer/>
-			</div>
-		</Wrapper>
+		<div className={Styles.appWrapper}>
+			<Header/>
+			<Profile />
+			<Navbar/>
+			<Footer/>
+		</div>
 	);
 }
 
