@@ -1,0 +1,20 @@
+{
+  "name": "react-2",
+  "version": "1.0.0",
+  "scripts": {
+    "clear": "rimraf dist",
+    "dev": "npm run clear && parcel src/index.html",
+    "build": "npm run clear && parcel build src/index.html --public-url . --no-source-maps --no-minify"
+  },
+  "dependencies": {
+    "node-sass": "^4.14.1",
+    "radium": "^0.26.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.1",
+    "rimraf": "^3.0.2",
+    "styled-components": "^5.2.1"
+  }
+}
