@@ -1,0 +1,16 @@
+.avatar {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+
+
+
+.active {
+	color: gold;
+}
+
+.listItem {
+	display: grid;
+	place-items: center center;
+}

@@ -1,0 +1,38 @@
+.navbarWrapper {
+    grid-area: n;
+    background-color: rgba(26, 188, 156, 0.6);
+    padding: 10px;
+}
+
+.nav {
+    margin: 0;
+}
+
+.navList {
+    padding: 0;
+    list-style: none;
+}
+.item {
+    font-size: 28px;
+}
+.item a {
+    color: aliceblue;
+    text-decoration: none;
+
+}
+
+.item a.activeLink {
+    color: gold;
+}
+
+.friendsBar {
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.friendsList {
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+}

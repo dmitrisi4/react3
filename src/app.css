@@ -1,0 +1,22 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Amatic SC', cursive;
+}
+.appWrapper {
+	display: grid;
+	background-color: #34495e;
+
+	grid-template-areas:
+            'h h'
+            'n c'
+            'f f';
+	grid-template-rows: 100px 1fr;
+	grid-template-columns: 2fr 10fr;
+	min-height: 100vh;
+}
+
+.appWrapperContent {
+	background-color: cadetblue;
+	padding: 20px;
+}

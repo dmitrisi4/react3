@@ -1,0 +1,8 @@
+.message {
+	background-color: coral;
+	margin: 15px 0;
+	padding: 20px;
+	border-bottom-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}

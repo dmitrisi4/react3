@@ -1,0 +1,19 @@
+.item {
+	color: yellow;
+	border: 1px solid #ffffff1b;
+	margin: 15px 0;
+	display: grid;
+	grid-template-columns: 100px 10fr;
+	grid-template-rows: 2fr 50px;
+	align-items: center;
+	padding: 10px 20px;
+	background-color: #ffffff1a;
+}
+
+.item img {
+	max-width: 100px;
+}
+
+.item.active {
+	color: aliceblue;
+}

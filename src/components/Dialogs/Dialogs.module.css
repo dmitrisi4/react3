@@ -1,0 +1,33 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    padding: 10px;
+}
+
+.dialogsList {
+    list-style: none;
+    padding: 0;
+    display: grid;
+}
+
+
+.dialog {
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+
+.messages {
+    max-width: 500px;
+    padding: 20px;
+    background-color: color(#fff a(0.2));
+}
+
+.messagesList {
+    padding: 10px;
+    margin: 10px;
+    height: 250px;
+    overflow-y: scroll;
+}
+

@@ -1,0 +1,14 @@
+.musicList {
+	display: grid;
+	gap: 10px;
+	padding: 10px;
+}
+.musicItem {
+	background-color: color(#fff a(20%));
+	padding: 10px;
+}
+
+.title {
+	
+}
+
