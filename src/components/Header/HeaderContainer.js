@@ -12,7 +12,12 @@ class HeaderContainer extends React.Component {
 				email: 'sichkardimitri@gmail.com',
 				password: 'GkPfQdQ2aq93vN!'
 			})
-			.then(() => axios.get(`https://social-network.samuraijs.com/api/1.0/auth/me`, {withCredentials: true}))
+			.then(() => axios.get(`https://social-network.samuraijs.com/api/1.0/auth/me`, {
+				withCredentials: true,
+				headers: {
+					'API-KEY': 'a1ba9434-2b4f-4039-be0a-487fc155bba4'
+				}
+			}))
 			.then(response => {
 				console.log({response});
 				debugger;
