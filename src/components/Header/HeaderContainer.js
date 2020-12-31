@@ -7,20 +7,17 @@ import * as axios from 'axios';
 
 class HeaderContainer extends React.Component {
 	componentDidMount() {
-		axios.get(`https://social-network.samuraijs.com/api/1.0/auth/me`, {
-			withCredentials: true,
-			headers: {
-				// 'Access-Control-Allow-Origin': true,
-				// 'Access-Control-Allow-Headers': true,
-				// 'Access-Control-Allow-Credentials': true,
-				// 'API-KEY': '2dd11272-1b24-47b8-889a-c9adb8ca16d9'
-			}
-		})
-		.then(response => {
-			console.log({response});
-			debugger;
-			this.props.setUserAuthData(response.data.data)
-		})
+		axios
+			.post(`https://social-network.samuraijs.com/api/1.0/auth/login`, {
+				email: 'sichkardimitri@gmail.com',
+				password: 'GkPfQdQ2aq93vN!'
+			})
+			.then(() => axios.get(`https://social-network.samuraijs.com/api/1.0/auth/me`, {withCredentials: true}))
+			.then(response => {
+				console.log({response});
+				debugger;
+				this.props.setUserAuthData(response.data.data)
+			});
 	}
 
 	render() {

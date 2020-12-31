@@ -34,7 +34,7 @@
   var $33facf3a10dcd13e701fe0db3b29cb29$export$register = $33facf3a10dcd13e701fe0db3b29cb29$var$register;
   var $33facf3a10dcd13e701fe0db3b29cb29$export$resolve = $33facf3a10dcd13e701fe0db3b29cb29$var$resolve;
   // ASSET: node_modules/@parcel/runtime-js/lib/JSRuntime.js
-  $33facf3a10dcd13e701fe0db3b29cb29$export$register(JSON.parse("{\"4yryz\":\"index.8d94cc15.js\",\"5SO2e\":\"avajpg.2c590b34.jpg\",\"6noaP\":\"loadbleach.91482f8b.svg\",\"3AfLj\":\"avatar.2e526632.jpg\",\"vED5i\":\"img.1ca8cd8f.png\"}"));
+  $33facf3a10dcd13e701fe0db3b29cb29$export$register(JSON.parse("{\"4yryz\":\"index.2c49d0a7.js\",\"5SO2e\":\"avajpg.2c590b34.jpg\",\"6noaP\":\"loadbleach.91482f8b.svg\",\"3AfLj\":\"avatar.2e526632.jpg\",\"vED5i\":\"img.1ca8cd8f.png\"}"));
   // ASSET: node_modules/object-assign/index.js
   var $19ed035e9cf66a8f6928c3ff631bc4c9$exports,
       $19ed035e9cf66a8f6928c3ff631bc4c9$var$getOwnPropertySymbols,
@@ -18918,12 +18918,13 @@
       value: function componentDidMount() {
         var _this = this;
 
-        $7b94ccf1c932ae1a723091ae744a1cc8$var$axios.get("https://social-network.samuraijs.com/api/1.0/auth/me", {
-          withCredentials: true,
-          headers: {// 'Access-Control-Allow-Origin': true,
-            // 'Access-Control-Allow-Headers': true,
-            // 'Access-Control-Allow-Credentials': true,
-          }
+        $7b94ccf1c932ae1a723091ae744a1cc8$var$axios.post("https://social-network.samuraijs.com/api/1.0/auth/login", {
+          email: 'sichkardimitri@gmail.com',
+          password: 'GkPfQdQ2aq93vN!'
+        }).then(function () {
+          return $7b94ccf1c932ae1a723091ae744a1cc8$var$axios.get("https://social-network.samuraijs.com/api/1.0/auth/me", {
+            withCredentials: true
+          });
         }).then(function (response) {
           console.log({
             response: response
