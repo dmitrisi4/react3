@@ -1,28 +1,27 @@
 import React from 'react';
 import css from './Music.module.css';
-import {addMusicActionCreator, changeNewAuthorActionCreator, changeNewSongActionCreator} from "../../redux/musicReducer";
 
 const Music = (props) => {
-	let addMusic = () => {
-		props.dispatch(addMusicActionCreator());
+	let addMusic = (e) => {
+		props.onAddMusic(e);
 	};
-	let changeAuthor = (event) => {
-			props.dispatch(changeNewAuthorActionCreator(event.target.value));
+	let changeAuthor = (e) => {
+				props.updateNewAuthor(e.target.value);
 	};
-	let changeSong = (event) => {
-			props.dispatch(changeNewSongActionCreator(event.target.value));
+	let changeSong = (e) => {
+			props.updateNewSong(e.target.value);
 	};
 
 	return (
 		<>
 			<div className={css.title}>Music</div>
-			<div>
-				<input type="text" placeholder="Author" onChange={changeAuthor} value={props.state.newMusicData.musicAuthor} />
-				<input type="text" placeholder="Song" onChange={changeSong} value={props.state.newMusicData.musicSong} />
-				<button onClick={addMusic}>Send</button>
-			</div>
+			<form onSubmit={addMusic}>
+				<input type="text" placeholder="Author" onChange={changeAuthor} value={props.newMusicAuthor} />
+				<input type="text" placeholder="Song" onChange={changeSong} value={props.newMusicSong} />
+				<button type="submit">Send</button>
+			</form>
 			<div className={css.musicList}>
-				{props.state.musicData.map((itemData, index) => {
+				{props.musicData.map((itemData, index) => {
 					return (
 						<div className={css.musicItem} key={index}>Автор: {itemData.author} <br/>
 							Трек: {itemData.song}

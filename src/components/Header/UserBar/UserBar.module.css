@@ -1,0 +1,21 @@
+.userBar {
+	max-width: 100px;
+	height: 50px;
+	display: inline-grid;
+	grid-auto-flow: column;
+	background-color: color(#fff a(0.4));
+
+
+}
+.picWrapper {
+	max-width: 40px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.userPic {
+	display: flex;
+	object-fit: cover;
+	width: 100%;
+	height: 40px;
+}
+

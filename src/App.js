@@ -1,31 +1,34 @@
 import React, {Component} from 'react';
 import {Route, BrowserRouter} from "react-router-dom";
-import Header from './components/Header/Header';
-import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
-import Profile from './components/Profile/Profile';
-import Dialogs from "./components/Dialogs/Dialogs";
-import News from "./components/News/News";
-import Music from "./components/Music/Music";
+import MusicContainer from "./components/Music/MusicContainer";
 import Settings from "./components/Settings/Settings";
 import css from "./app.css";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
+import BlogContainer from "./components/Blog/BlogContainer";
+import NewsContainer from "./components/News/NewsContainer";
+import NavbarContainer from "./components/Navbar/NavbarContainer";
+import UsersContainer from "./components/Users/UsersContainer";
+import ProfileContainer from "./components/Profile/ProfileContainer";
+import HeaderContainer from "./components/Header/HeaderContainer";
 
 const App = (props) => {
-
-
 
 	return (
 		<BrowserRouter>
 			<div className={css.appWrapper}>
-				<Header/>
+				<HeaderContainer />
 				<div className={css.appWrapperContent}>
-					<Route path='/profile' render={() => <Profile state={props.state.profilePage} dispatch={props.dispatch} />}/>
-					<Route path='/dialogs' render={() => <Dialogs state={props.state.dialogsPage} dispatch={props.dispatch} />}/>
-					<Route path='/news' render={() => <News state={props.state.newsPage} dispatch={props.dispatch} />} />
-					<Route path='/music' render={() => <Music state={props.state.musicPage} dispatch={props.dispatch} />}/>
+					<Route exact path='/' render={() => <ProfileContainer />} />
+					<Route path='/profile/:userId' render={() => <ProfileContainer />} />
+					<Route path='/dialogs' render={() => <DialogsContainer />} />
+					<Route path='/blog' render={() => <BlogContainer />} />
+					<Route path='/news' render={() => <NewsContainer />} />
+					<Route path='/music' render={() => <MusicContainer />} />
+					<Route path='/users' render={() => <UsersContainer />} />
 					<Route path='/settings' render={() => <Settings />}/>
 				</div>
-				<Navbar state={props.state.sidebar}/>
+				<NavbarContainer />
 				<Footer/>
 			</div>
 		</BrowserRouter>

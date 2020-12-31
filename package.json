@@ -7,16 +7,23 @@
     "build": "npm run clear && parcel build src/index.html --public-url . --no-source-maps --no-minify"
   },
   "dependencies": {
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "axios": "^0.21.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5"
   },
   "devDependencies": {
-    "autoprefixer": "^10.0.1",
-    "parcel": "^2.0.0-beta.1",
-    "postcss": "^8.1.6",
+    "@types/react-router-dom": "^5.1.6",
+    "autoprefixer": "^10.0.4",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^1.0.6",
+    "parcel": "^2.0.0-nightly.466",
+    "postcss": "^8.1.14",
     "postcss-color-function": "^4.1.0",
     "postcss-modules": "^3.2.2",
-    "postcss-nested": "^5.0.1",
+    "postcss-nested": "^5.0.2",
     "react-router-dom": "^5.2.0",
     "rimraf": "^3.0.2"
   }

@@ -1,5 +1,5 @@
 .item {
-	color: yellow;
+	color: #000;
 	border: 1px solid #ffffff1b;
 	margin: 15px 0;
 	display: grid;
@@ -12,8 +12,4 @@
 
 .item img {
 	max-width: 100px;
-}
-
-.item.active {
-	color: aliceblue;
 }

@@ -13,4 +13,6 @@
 .listItem {
 	display: grid;
 	place-items: center center;
+	max-width: 50px;
+	overflow: hidden;
 }

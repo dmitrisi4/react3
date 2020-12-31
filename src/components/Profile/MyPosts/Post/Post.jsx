@@ -5,7 +5,7 @@ import imgURL from 'url:../../../../images/img.png';
 const Post = (props) => {
 
 	return (
-		<div className={`${css.item} ${css.active}`}>
+		<div className={`${css.item}`}>
 			<img src={imgURL} alt="avatar"/>
 			<div>{props.message}</div>
 			<div>

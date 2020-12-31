@@ -1,7 +1,7 @@
 .navbarWrapper {
     grid-area: n;
-    background-color: rgba(26, 188, 156, 0.6);
     padding: 10px;
+    background-color: #fff;
 }
 
 .nav {
@@ -13,10 +13,10 @@
     list-style: none;
 }
 .item {
-    font-size: 28px;
+    font-size: 20px;
 }
 .item a {
-    color: aliceblue;
+    color: rgb(40 41 47 / 72%);
     text-decoration: none;
 
 }

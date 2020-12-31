@@ -3,6 +3,7 @@ import dialogsReducer from "./dialogsReducer";
 import musicReducer from "./musicReducer";
 import sidebarReducer from "./sidebarReducer";
 import newsReducer from "./newsReducer";
+import blogReducer from "./blogReducer";
 
 let store = {
 	_state: {
@@ -66,6 +67,23 @@ let store = {
 			}
 		},
 
+		blogPage: {
+			blogData: [
+				{id: Math.random().toFixed(4), body: 'Text Lorem 1...', title: 'Title Lorem 1' },
+				{id: Math.random().toFixed(4), body: 'Text Lorem 2...', title: 'Title Lorem 2' },
+			],
+			newBlogData: {
+				body: '',
+				title: '',
+			}
+		},
+
+		userData: {
+			userList: [
+				{id: Math.random().toFixed(4), login: 'user', avatar: 'https://media.wired.com/photos/5a593a7ff11e325008172bc2/master/pass/pulsar-831502910.jpg'}
+			],
+		},
+
 		sidebar: [
 			{
 				id: Math.random().toFixed(4),
@@ -100,6 +118,8 @@ let store = {
 		this._state.sidebar = sidebarReducer(this._state.sidebar, action);
 		this._state.newsPage = newsReducer(this._state.newsPage, action);
 
+		this._state.blogPage = blogReducer(this._state.blogPage, action);
+
 		this._callSubscriber(this._state);
 
 	},
@@ -109,4 +129,4 @@ let store = {
 
 
 
-export default store;
+// export default store;

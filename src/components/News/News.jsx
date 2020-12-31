@@ -1,31 +1,23 @@
 import React from 'react';
 import Article from "./Article/Article";
-import {
-	addArticleCreator,
-	changeNewAuthorCreator,
-	changeNewBodyCreator,
-	changeNewTitleCreator
-} from "../../redux/newsReducer";
 
 const News = (props) => {
-	let article = props.state.articleData.map((article, index) => {
+	let article = props.articleData.map((article, index) => {
 	return <Article title={article.title} body={article.body} author={article.author} key={index} />
 	});
 
-	let addArticle = () => {
-		props.dispatch(addArticleCreator());
+	let addArticle = (e) => {
+		props.onAddArticle(e)
 	};
 	let changeNewAuthor = (e) => {
-		props.dispatch(changeNewAuthorCreator(e.target.value));
+		props.onUpdateNewAuthor(e.target.value);
 	};
 	let changeNewTitle = (e) => {
-		props.dispatch(changeNewTitleCreator(e.target.value));
+		props.onUpdateNewTitle(e.target.value);
 	};
 	let changeNewBody = (e) => {
-		props.dispatch(changeNewBodyCreator(e.target.value));
+		props.onUpdateNewBody(e.target.value);
 	};
-
-
 
 
 	return (
@@ -34,10 +26,12 @@ const News = (props) => {
 				{article}
 			</div>
 			<div>
-				<input type="text" placeholder="Author" onChange={changeNewAuthor} value={props.state.newArticleData.articleAuthor}/>
-				<input type="text" placeholder="Title Article" onChange={changeNewTitle} value={props.state.newArticleData.articleTitle} />
-				<textarea placeholder="Text" onChange={changeNewBody} value={props.state.newArticleData.articleBody} />
-				<button onClick={addArticle}>Add</button>
+				<form onSubmit={addArticle}>
+				<input type="text" placeholder="Author" onChange={changeNewAuthor} value={props.newArticleAuthor}/>
+				<input type="text" placeholder="Title Article" onChange={changeNewTitle} value={props.newArticleTitle} />
+				<textarea placeholder="Text" onChange={changeNewBody} value={props.newArticleBody} />
+				<button type="submit">Add</button>
+				</form>
 			</div>
 		</div>
 	)
