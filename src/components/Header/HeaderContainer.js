@@ -7,7 +7,12 @@ import * as axios from 'axios';
 
 class HeaderContainer extends React.Component {
 	componentDidMount() {
-		axios.get(`/api/auth/me`)
+		axios.get(`https://social-network.samuraijs.com/api/1.0/auth/me`, {
+			withCredentials: true,
+			headers: {
+				'API-KEY': '2dd11272-1b24-47b8-889a-c9adb8ca16d9'
+			}
+		})
 		.then(response => {
 			console.log({response});
 			debugger;
